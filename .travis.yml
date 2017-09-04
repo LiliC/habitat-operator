@@ -1,7 +1,12 @@
 language: go
 
-# skip installation of dependencies since they are already in vendor/
-install: true
+sudo: required
+
+env:
+    - CHANGE_MINIKUBE_NONE_USER=true 
+
+install:
+  ./test-setup.sh
 
 go:
   - 1.8.x
