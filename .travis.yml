@@ -5,13 +5,15 @@ sudo: required
 env:
     - CHANGE_MINIKUBE_NONE_USER=true 
 
-install:
-  ./test-setup.sh
+install: true
+
 
 go:
   - 1.8.x
 
 git:
   depth: 1
+
+before_script: ./test-setup.sh
 
 script: make TESTIMAGE=kinvolk/habitat-operator:123 e2e
