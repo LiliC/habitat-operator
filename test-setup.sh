@@ -35,3 +35,9 @@ kubectl create secret generic user-toml-secret
 echo "getting secret"
 kubectl get secret
 
+echo "creating image"
+eval $(minikube docker-env)
+make TAG=123 image
+
+echo "docker image"
+docker images
