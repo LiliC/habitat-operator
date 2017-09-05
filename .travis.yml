@@ -7,7 +7,6 @@ env:
 
 install: true
 
-
 go:
   - 1.8.x
 
